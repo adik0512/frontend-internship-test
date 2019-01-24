@@ -1,0 +1,169 @@
+/* Here goes your CSS */
+/* Main styles */
+html,
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0; }
+
+.main {
+  background: linear-gradient(-45deg, #fcaf32 0%, #fc888e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; }
+
+.btn-main {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-family: 'Lobster', cursive;
+  font-size: 42px;
+  height: 60px;
+  outline: none;
+  padding: 0 20px;
+  transition: all .5s ease; }
+  .btn-main:hover {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15); }
+
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s, -webkit-transform 0.25s; }
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1.75rem 1.5rem;
+  width: 13rem;
+  border-radius: 0.25rem; }
+
+#close-button {
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  font-size: 24px;
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 1rem; }
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s, -webkit-transform 0.25s; }
+
+.login-txt {
+  font-family: 'Lobster', cursive;
+  padding: 0 20px;
+  text-align: center; }
+
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: space-around; }
+
+.container > input,
+button,
+h2,
+label {
+  margin: 5px; }
+
+.btn-submit {
+  background-color: #000;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 11px;
+  margin: 4px 2px;
+  cursor: pointer; }
+
+.btn-submit:hover {
+  background-color: lightpink;
+  color: white; }
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #000; }
+
+.control {
+  display: block;
+  position: relative;
+  padding-left: 15px;
+  text-indent: 10px;
+  cursor: pointer;
+  font-size: 14px; }
+
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0; }
+
+.control_indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  background: #ffffff;
+  border: 1px solid #000000; }
+
+.control-radio .control_indicator {
+  border-radius: undefined; }
+
+.control input:focus ~ .control_indicator,
+.control:hover input ~ .control_indicator {
+  background: #ffffff; }
+
+.control input:checked ~ .control_indicator {
+  background: #ffffff; }
+
+.control_indicator:after {
+  box-sizing: unset;
+  content: '';
+  position: absolute;
+  display: none; }
+
+.control input:checked ~ .control_indicator:after {
+  display: block; }
+
+.control-checkbox .control_indicator:after {
+  left: 6px;
+  top: 1px;
+  width: 3px;
+  height: 10px;
+  border: solid #000000;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg); }
